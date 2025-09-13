@@ -1,7 +1,7 @@
 CREATE DATABASE hms_db;
 USE hms_db;
 
-CREATE TABLE Patients (
+CREATE TABLE Patient (
     patient_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE Patients (
     email VARCHAR(100) UNIQUE
 );
 
-CREATE TABLE Doctors (
+CREATE TABLE Doctor (
     doctor_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Doctors (
     email VARCHAR(100) UNIQUE
 );
 
-CREATE TABLE Nurses (
+CREATE TABLE Nurse (
     nurse_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
@@ -121,6 +121,49 @@ CREATE TABLE Insurance (
     patient_id     INT,
     FOREIGN KEY (patient_id) REFERENCES Patient(patient_id)
 );
+
+DESCRIBE Patient;
+DESCRIBE Doctor;
+DESCRIBE Nurse;
+DESCRIBE Employee;
+DESCRIBE Receptionist;
+DESCRIBE Department;
+DESCRIBE Room;
+DESCRIBE Appointment;
+DESCRIBE MedicalRecord;
+DESCRIBE TestReport;
+DESCRIBE Bill;
+DESCRIBE Medication;
+DESCRIBE Insurance;
+
+SELECT * FROM Patient;
+SELECT * FROM Doctor;
+SELECT * FROM Nurse;
+SELECT * FROM Employee;
+SELECT * FROM Receptionist;
+SELECT * FROM Department;
+SELECT * FROM Room;
+SELECT * FROM Appointment;
+SELECT * FROM MedicalRecord;
+SELECT * FROM TestReport;
+SELECT * FROM Bill;
+SELECT * FROM Medication;
+SELECT * FROM Insurance;
+DROP TABLE IF EXISTS Patient;
+DROP TABLE IF EXISTS Doctor;
+DROP TABLE IF EXISTS Nurse;
+DROP TABLE IF EXISTS Employee;
+DROP TABLE IF EXISTS Receptionist;
+DROP TABLE IF EXISTS Department;
+DROP TABLE IF EXISTS Room;
+DROP TABLE IF EXISTS Appointment;
+DROP TABLE IF EXISTS MedicalRecord;
+DROP TABLE IF EXISTS TestReport;
+DROP TABLE IF EXISTS Bill;
+DROP TABLE IF EXISTS Medication;
+DROP TABLE IF EXISTS Insurance;
+DROP DATABASE IF EXISTS hms_db;
+
 
 
 
