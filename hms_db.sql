@@ -1,6 +1,37 @@
 CREATE DATABASE hms_db;
 USE hms_db;
 
+CREATE TABLE Patients (
+    patient_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    date_of_birth DATE,
+    gender VARCHAR(10),
+    address VARCHAR(255),
+    medical_history TEXT,
+    phone VARCHAR(20),
+    email VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE Doctors (
+    doctor_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    specialty VARCHAR(100),
+    phone VARCHAR(20),
+    email VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE Nurses (
+    nurse_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    qualification VARCHAR(150),
+    department VARCHAR(100),
+    phone VARCHAR(20),
+    email VARCHAR(100) UNIQUE
+);
+
 create table Employee (
 employee_id int not null,
 name varchar(50) not null,
